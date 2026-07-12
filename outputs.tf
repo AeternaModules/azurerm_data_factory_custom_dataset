@@ -1,49 +1,45 @@
-output "data_factory_custom_datasets" {
-  description = "All data_factory_custom_dataset resources"
-  value       = azurerm_data_factory_custom_dataset.data_factory_custom_datasets
-}
 output "data_factory_custom_datasets_additional_properties" {
-  description = "List of additional_properties values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.additional_properties]
+  description = "Map of additional_properties values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.additional_properties }
 }
 output "data_factory_custom_datasets_annotations" {
-  description = "List of annotations values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.annotations]
+  description = "Map of annotations values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.annotations }
 }
 output "data_factory_custom_datasets_data_factory_id" {
-  description = "List of data_factory_id values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.data_factory_id]
+  description = "Map of data_factory_id values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.data_factory_id }
 }
 output "data_factory_custom_datasets_description" {
-  description = "List of description values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.description]
+  description = "Map of description values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.description }
 }
 output "data_factory_custom_datasets_folder" {
-  description = "List of folder values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.folder]
+  description = "Map of folder values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.folder }
 }
 output "data_factory_custom_datasets_linked_service" {
-  description = "List of linked_service values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.linked_service]
+  description = "Map of linked_service values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.linked_service }
 }
 output "data_factory_custom_datasets_name" {
-  description = "List of name values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.name]
+  description = "Map of name values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.name }
 }
 output "data_factory_custom_datasets_parameters" {
-  description = "List of parameters values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.parameters]
+  description = "Map of parameters values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.parameters }
 }
 output "data_factory_custom_datasets_schema_json" {
-  description = "List of schema_json values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.schema_json]
+  description = "Map of schema_json values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.schema_json }
 }
 output "data_factory_custom_datasets_type" {
-  description = "List of type values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.type]
+  description = "Map of type values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.type }
 }
 output "data_factory_custom_datasets_type_properties_json" {
-  description = "List of type_properties_json values across all data_factory_custom_datasets"
-  value       = [for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : v.type_properties_json]
+  description = "Map of type_properties_json values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.type_properties_json }
 }
 
