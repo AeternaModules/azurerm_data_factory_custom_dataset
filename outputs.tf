@@ -24,7 +24,7 @@ output "data_factory_custom_datasets_folder" {
 }
 output "data_factory_custom_datasets_linked_service" {
   description = "Map of linked_service values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
-  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => v.linked_service if v.linked_service != null && length(v.linked_service) > 0 }
+  value       = { for k, v in azurerm_data_factory_custom_dataset.data_factory_custom_datasets : k => one(v.linked_service) if v.linked_service != null && length(v.linked_service) > 0 }
 }
 output "data_factory_custom_datasets_name" {
   description = "Map of name values across all data_factory_custom_datasets, keyed the same as var.data_factory_custom_datasets"
